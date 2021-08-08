@@ -46,7 +46,7 @@ Get a Single Thread
 
 ### CRUD Route 3: routes/post.js
 
-Post will allow users to create their own posts and create a post within a thread on 4M. A thread will contain multiple posts from multiple users who are interested in posting on that thread. Post will allow users to edit only their own posts and delete their own posts according to that post's specific id (postId).
+Post will allow users to create a post within a thread on 4M. A thread will contain multiple posts from multiple users who are interested in posting on that thread. Post will allow users to edit only their own posts and delete their own posts according to that post's specific id (postId).
 
 Create a Post
 - `POST /post`: if the user is logged in, it should store the incoming post along with their userId
