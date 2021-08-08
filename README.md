@@ -62,8 +62,9 @@ Implementing a Text Search will allow the user to search for a word in 4M and al
 ### Aggregations
 
 The API will create aggregation lists for:
-- The most popular thread
-- The most recent thread
+- Sort by number of posts (most # of posts to least # of posts)
+- Sort by date created (creation of thread)
+- Sort by date last updated (last post on a thread)
 
 ## Trello Progress
 
