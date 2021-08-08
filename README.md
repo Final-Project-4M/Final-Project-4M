@@ -4,7 +4,7 @@
 
 The app allows users to create, update (edit), and delete their own posts as well as create and delete their own threads. Users without accounts can still view posts and threads but cannot create their own posts and/or threads.
 
-This app will be used to engage different groups of the same space together so they can discuss some topic or give  their opinion about something or provide useful information that can help another person or group and solve their problems, etc.
+This app will form  a key part of communication to users as it will be used to engage different groups of the same space together so they can discuss some topic or give  their opinion about something or provide useful information that can help another person or group and solve their problems, etc.
 
 Team Members:
 - Brian Cabacungan
