@@ -1,0 +1,25 @@
+{
+  "name": "final-project-4m",
+  "version": "1.0.0",
+  "description": "4M is a MongoDB/Express API driven app that people can use to communicate with each other about a variety of different topics in specific niches.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Final-Project-4M/Final-Project-4M.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Final-Project-4M/Final-Project-4M/issues"
+  },
+  "homepage": "https://github.com/Final-Project-4M/Final-Project-4M#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "uuid": "^8.3.2"
+  }
+}
