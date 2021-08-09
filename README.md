@@ -62,7 +62,7 @@ Implementing a Text Search will allow the user to search for a word in 4M and al
 ### Aggregations
 
 The API will create aggregation lists for:
-- Sort by number of posts (most # of posts to least # of posts)
+- Sort by number of posts (most number of posts to least number of posts)
 - Sort by date created (creation of thread)
 - Sort by date last updated (last post on a thread)
 
