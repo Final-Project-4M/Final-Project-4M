@@ -4,7 +4,7 @@
 
 The app allows users to view posts in the forum about any topics there are. They can also create, update (edit), and delete their own posts as well as create and delete their own threads. Users without accounts can still view posts and threads but cannot create their own posts and/or threads.
 
-This app will form  a key part of communication to users as it will be used to engage different groups of the same space together so they can discuss some topic or give  their opinion about something or provide useful information that can help another person or group and solve their problems, etc.
+This app will form a key part of communication to users as it will be used to engage different groups of the same space together so they can discuss some topic or give their opinion about something or provide useful information that can help another person or group and solve their problems, etc.
 
 Team Members:
 - Brian Cabacungan
@@ -22,8 +22,7 @@ Features based around 4M will be as follows:
 - Users can delete any threads they created (logged in).
 - Users can edit or delete any posts they posted (logged in).
 - Users can look for posts by searching a word or a phrase (logged in or not logged in).
-- TBD (aggregation feature)
-
+- Users can sort by number of posts in each thread with most number of posts on top.
 
 ### Authentication and Authorization: routes/login.js
 
@@ -62,8 +61,7 @@ Get a single thread
 Post will allow users to create a post within a thread on 4M. A thread will contain multiple posts from multiple users who are interested in posting on that thread. Post will allow users to edit only their own posts and delete their own posts according to that post's specific id (postId).
 
 Create a post
-// Do we need threadId as a param here? Like :threadId
-- `POST /post`: If the user is logged in, it should store the incoming post along with their userId.
+- `POST /post/:threadId`: If the user is logged in, it should store the incoming post along with their userId.
 
 Update (edit) a post
 - `PUT /post/:postId`: If the user is logged in, and it is their post, they will have the ability to update their post.
@@ -78,8 +76,8 @@ Here are the routes which are responsible for the text search and aggregation fe
 Text search
 - `GET /other/searchPosts`: It should carry out a text search and return the posts with the best text search score.
 
-TBD (aggregation feature)
-- `GET /other/...`: ...
+Sort
+- `GET /other/sortByNumber`: It should sort by number of posts in each thread with most number of posts on top.
 
 ### Indexes and uniqueness
 
@@ -91,10 +89,8 @@ Implementing a text search will allow users to search for a word or a phrase wit
 
 ### Aggregations
 
-The API will use aggregation for (not confirmed):
+The API will use aggregation for:
 - Sort by number of posts in each thread (most number of posts on top)
-- Sort by date created (newest/oldest on top)
-- Filter by thread type (e.g. Sports, Food, Lifestyle, etc.)
 
 ## Trello Progress
 
