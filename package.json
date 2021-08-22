@@ -22,8 +22,5 @@
     "express": "^4.17.1",
     "mongoose": "^5.13.5",
     "uuid": "^8.3.2"
-  },
-  "engines": {
-    "node": "14.x"
   }
 }
