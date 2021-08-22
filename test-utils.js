@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+
 
 const models = [require('./models/post'), require('./models/thread'), require('./models/token'), require('./models/user')];
 
 module.exports = {};
 
 module.exports.connectDB = async () => {
-  await mongoose.connect(global.__MONGO_URI__, {
+  await mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
