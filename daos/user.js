@@ -9,10 +9,10 @@ module.exports.createUser = async (userObj) => {
 };
 
 module.exports.getUser = async (email) => {
-    return await User.findOne ({ email: email });
+    return await User.findOne({ email: email });
 };
 
 module.exports.updateUserPassword = async (userId, password) => {
-    await User.updateOne ({ _id: userId}, { $set: { password: password } });
+    await User.updateOne({ _id: userId}, { $set: { password: password } });
     return true;
 };
