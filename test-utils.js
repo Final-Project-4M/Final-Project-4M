@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-// Modify this line!!! Match it with our models
-// const models = [require('./models/note'), require('./models/user')];
 const models = [require('./models/post'), require('./models/thread'), require('./models/token'), require('./models/user')];
 
 module.exports = {};
