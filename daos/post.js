@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
-const Post = require('../modles/post');
+const Post = require('../models/post');
 
 module.exports = {};
 
-//Create: POST /post - restricted to users with the "admin" role
+// Create a post: POST /post
 module.exports.createPost = async (postObj) => {
     const created = await Post.create(postObj);
     return created;
 };
 
-//Update a note: PUT /post/:id - restricted to users with the "admin" role
+// Update a post: PUT /post/:postId
 module.exports.updatePost = async (postId, postObj) => {
     if (!mongoose.Types.ObjectId.isValid(postId)) {
         return false;
@@ -19,13 +19,13 @@ module.exports.updatePost = async (postId, postObj) => {
     return true;
 };
 
-//Get all posts: GET /posts - open to all users
+// Get all posts: GET /posts - open to all users
 module.exports.getPosts = async () => {
     //find all items
     return await Post.find().lean();
 };
 
-// get one post
+// Get one post: GET /posts/:postId
 module.exports.getOnePost = async (postId) => {
     //find one post
     return await Post.findOne({ _id: postId });

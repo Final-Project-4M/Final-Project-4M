@@ -14,14 +14,14 @@ module.exports.getThreads = async () => {
 
 module.exports.getThreadById = async (threadId) => {
     const thread = await Thread.aggregate([
-        { $match: { _id: mongoose.Types.ObjectId(threadId) }},
+        { $match: { _id: mongoose.Types.ObjectId(threadId) } },
         { $unwind: "$threads" },
-        { $lookup: { from: "threads", localField: "threads", foreignField: "_id", as: "thread" }},
-        { $unwind: '$thread'},
-        { $project: { _id: 0} },
-        { $group: { _id: "$_id", userId: { $first: "$userId" }, items: { $push: "$thread"}, total: {$first: "$total"}}}
+        { $lookup: { from: "threads", localField: "threads", foreignField: "_id", as: "thread" } },
+        { $unwind: '$thread' },
+        { $project: { _id: 0 } },
+        { $group: { _id: "$_id", userId: { $first: "$userId" }, items: { $push: "$thread" }, total: { $first: "$total" } } }
     ]);
-    return order[0];
+    return thread[0];
 };
 
 module.exports.getThreadByUser = async (userId) => {
