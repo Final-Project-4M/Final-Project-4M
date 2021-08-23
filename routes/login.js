@@ -67,6 +67,10 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+// Logout: POST/login/logout
+router.post("/logout", async (req, res, next) => {
+})
+
 // Change Password POST /login/password
 router.post("/password", isAuthorized, async (req, res, next) => {
   const { password } = req.body;

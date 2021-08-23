@@ -1,5 +1,55 @@
 # 4M
 
+## Proof of Concept
+
+### Project Update as of 22 August 2021
+
+#### Completed
+
+Here's what's been completed:
+- Invited team members to Trello board.
+- Divided Project Proposal tasks into two teams: Trello Tasks (Brian and Karen) and README (Giorgio and Maboh).
+- Completed a working and updated Trello board for project progress and updated README.
+- Divided Proof of Concept tasks into two teams: Deployment (Giorgio and Maboh) and README (Brian and Karen).
+- Set up our project starter code files.
+- Created our project MongoDB Atlas cluster.
+- Set up and deployed our project to Heroku.
+
+#### In Review
+
+Here's what's ready for review:
+- All models files are In Review and soon to be moved into Completed.
+- All daos files are In Review and soon to be moved into Completed.
+
+#### In Progress
+
+Here's what's currently in progress:
+- We are currently setting up CI and CD. We need to connect Heroku to GitHub for CD and configure the settings. We also need to work on workflows files to start CI.
+- We are currently working on Deployment. For simple demo purposes, our group has implemented a front-end signup page for proof of concept. The full application is still being developed.
+- We are finishing up our Authentication and Authorization route (routes/login.js) and getting it ready for review.
+
+#### This Sprint
+
+Here's what's next in the sprint:
+- For our next sprint, we will be working on CRUD Route 1: routes/thread.js.
+
+#### Backlog
+
+Here's what's in our backlog:
+- Write CRUD Route 2: routes/post.js.
+- Write CRUD Route 3: routes/other.js.
+- Write middleware/... files.
+- Set up and create a working UI in the front-end.
+
+Project progress is still being tracked on Trello. As the project progresses, tasks are updated frequently and moved into In Progress, In Review, or Completed.
+
+### How to access API
+
+The link below allows of public access of our API.
+https://peaceful-eyrie-71225.herokuapp.com/
+
+## About 4M
+
 4M is a MongoDB/Express API driven app that people can use to communicate with each other about a variety of different topics in specific niches.
 
 The app allows users to view posts in the forum about any topics there are. They can also create, update (edit), and delete their own posts as well as create and delete their own threads. Users without accounts can still view posts and threads but cannot create their own posts and/or threads.
@@ -95,28 +145,3 @@ The API will use aggregation for:
 ## Trello Progress
 
 The final project tasks and progress will be tracked using Trello.
-
-
-
-
-
-
-### Proof of Concept
-
-
-## Project Update
-22 August 2021
-- Starter code files are in review
-- All models files are in review
-- All daos files are in review
-- Created a Mongo Atlas cluster
-- Deployed our project to Heroku
-- Implemented signup page (front-end) for proof of concept
-
-Things need to be done:
-- Complete /routes files
-- Complete /middleware files
-- Create a working UI in the front-end
-
-How to access API:
-https://peaceful-eyrie-71225.herokuapp.com/
