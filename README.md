@@ -111,12 +111,12 @@ The final project tasks and progress will be tracked using Trello.
 - All daos files are in review
 - Created a Mongo Atlas cluster
 - Deployed our project to Heroku
+- Implemented signup page (front-end) for proof of concept
 
 Things need to be done:
 - Complete /routes files
 - Complete /middleware files
 - Create a working UI in the front-end
 
-
-
-
+How to access API:
+https://peaceful-eyrie-71225.herokuapp.com/
