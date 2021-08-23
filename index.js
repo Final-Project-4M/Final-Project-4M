@@ -1,12 +1,12 @@
 const server = require("./server");
 const mongoose = require('mongoose');
-require('dotenv').config();
+// require('dotenv').config();
 
-const uri = process.env.MONGO_URI;
+// const uri = process.env.MONGO_URI;
 
 const port = process.env.PORT || 5000;
 
-mongoose.connect(uri, {
+mongoose.connect("mongodb+srv://4M_admin:4M_deploy@final-project-4m.zri4d.mongodb.net/Final-Project-4M?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true

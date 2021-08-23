@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
+// require('dotenv').config();
 
 
 const models = [require('./models/post'), require('./models/thread'), require('./models/token'), require('./models/user')];
@@ -7,7 +7,7 @@ const models = [require('./models/post'), require('./models/thread'), require('.
 module.exports = {};
 
 module.exports.connectDB = async () => {
-  await mongoose.connect(process.env.MONGO_URI, {
+  await mongoose.connect("mongodb+srv://4M_admin:4M_deploy@final-project-4m.zri4d.mongodb.net/Final-Project-4M?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true

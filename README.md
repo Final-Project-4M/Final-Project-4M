@@ -99,4 +99,24 @@ The final project tasks and progress will be tracked using Trello.
 
 
 
-### Project Update
+
+
+### Proof of Concept
+
+
+## Project Update
+22 August 2021
+- Starter code files are in review
+- All models files are in review
+- All daos files are in review
+- Created a Mongo Atlas cluster
+- Deployed our project to Heroku
+
+Things need to be done:
+- Complete /routes files
+- Complete /middleware files
+- Create a working UI in the front-end
+
+
+
+
