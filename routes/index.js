@@ -12,7 +12,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// router.use("/login", require('./login'));
+router.use("/login", require('./login'));
 // router.use("/other", require('./other'));
 // router.use("/post", require('./post'));
 // router.use("/thread", require('./thread'));
