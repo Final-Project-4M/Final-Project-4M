@@ -95,3 +95,8 @@ The API will use aggregation for:
 ## Trello Progress
 
 The final project tasks and progress will be tracked using Trello.
+
+
+
+
+### Project Update
