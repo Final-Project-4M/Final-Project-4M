@@ -10,6 +10,7 @@ Here's what's been completed:
 - Invited team members to Trello board.
 - Divided Project Proposal tasks into two teams: Trello Tasks (Brian and Karen) and README (Giorgio and Maboh).
 - Completed a working and updated Trello board for project progress and updated README.
+- Completed a deploying app with Heroku.
 - Divided Proof of Concept tasks into two teams: Deployment (Giorgio and Maboh) and README (Brian and Karen).
 - Set up our project starter code files.
 - Created our project MongoDB Atlas cluster.
@@ -25,7 +26,6 @@ Here's what's ready for review:
 
 Here's what's currently in progress:
 - We are currently setting up CI and CD. We need to connect Heroku to GitHub for CD and configure the settings. We also need to work on workflows files to start CI.
-- We are currently working on Deployment. For simple demo purposes, our group has implemented a front-end signup page for proof of concept. The full application is still being developed.
 - We are finishing up our Authentication and Authorization route (routes/login.js) and getting it ready for review.
 
 #### This Sprint
@@ -47,8 +47,8 @@ Project progress is still being tracked on Trello. As the project progresses, ta
 
 The link to our deployed app: https://floating-reef-51161.herokuapp.com/
 
-We set up our database cluster in MongoDB Atlas. At the moment, we have two users registered in our database. For the proof of concept,
-we are demonstrating that our backend can interact with our database in MongoDB Atlas by getting the user informations. You can sign up to 4M through Postman by using the URL https://floating-reef-51161.herokuapp.com/login/signup and entering your email and password in the request body.
+We set up our database cluster in MongoDB Atlas. At the moment, we have three users registered in our database. For proof of concept,
+we are demonstrating that our backend can interact with our database in MongoDB Atlas by getting the user informations. You can sign up for 4M through Postman by using the URL https://floating-reef-51161.herokuapp.com/login/signup and entering your email and password in the request body.
 
 ## About 4M
 
