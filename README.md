@@ -45,8 +45,7 @@ Project progress is still being tracked on Trello. As the project progresses, ta
 
 ### How to access API
 
-The link below allows of public access of our API.
-https://peaceful-eyrie-71225.herokuapp.com/
+The link to our Heroku App to access our API: https://peaceful-eyrie-71225.herokuapp.com/
 
 ## About 4M
 
