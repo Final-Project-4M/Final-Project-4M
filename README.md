@@ -45,7 +45,10 @@ Project progress is still being tracked on Trello. As the project progresses, ta
 
 ### How to access API
 
-The link to our Heroku App to access our API: https://peaceful-eyrie-71225.herokuapp.com/
+The link to our deployed app: https://peaceful-eyrie-71225.herokuapp.com/
+
+We set up our database cluster in MongoDB Atlas. At the moment, we have two users registered in our database. For the proof of concept,
+we are demonstrating that our backend can interact with our database in MongoDB Atlas by getting the user informations. You can sign up to 4M through Postman by using the URL https://peaceful-eyrie-71225.herokuapp.com/login/signup and entering your email and password in the request body.
 
 ## About 4M
 

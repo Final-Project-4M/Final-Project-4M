@@ -12,6 +12,10 @@ module.exports.getUser = async (email) => {
     return await User.findOne({ email: email });
 };
 
+module.exports.getAllUser = async () => {
+    return await User.find().lean();
+};
+
 module.exports.updateUserPassword = async (userId, password) => {
     await User.updateOne({ _id: userId}, { $set: { password: password } });
     return true;
