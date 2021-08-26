@@ -20,9 +20,9 @@ const isAuthorized = async (req, res, next) => {
   }
 }
 
-const isAdmin = async (req, res, next) => {
-  req.isAdmin = req.userInfo.roles.includes("admin");
-  next();
-}
+// const isAdmin = async (req, res, next) => {
+//   req.isAdmin = req.userInfo.roles.includes("admin");
+//   next();
+// }
 
-module.exports = { isAuthorized, isAdmin };
+module.exports = { isAuthorized };

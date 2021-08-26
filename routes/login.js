@@ -7,11 +7,7 @@ const userDao = require('../daos/user');
 require('dotenv').config();
 const jwtSecret = process.env.JWT_SECRET;
 const { isAuthorized } = require('../middleware/auth');
-// const { errorHandler } = require('../middleware/error');
-
-// router.get("/", (req, res, next) => {
-//   res.send('<p>Hello!</p>');
-// });
+const { errorHandler } = require('../middleware/error');
 
 // Signup: POST /login/signup
 router.post("/signup", async (req, res, next) => {
@@ -55,7 +51,7 @@ router.post("/", async (req, res, next) => {
             if (error || !result) {
               res.status(401).send("Incorrect password");
             } else {
-              const token = jwt.sign({ email: user.email, _id: user._id, roles: user.roles }, jwtSecret);
+              const token = jwt.sign({ email: user.email, _id: user._id }, jwtSecret);
               res.json({ token });
             }
           });
@@ -68,9 +64,9 @@ router.post("/", async (req, res, next) => {
 });
 
 // Logout: POST/login/logout
-router.post("/logout", async (req, res, next) => {
-  
-})
+// I think you just need to delete the token in the frontend
+// router.post("/logout", isAuthorized, async (req, res, next) => {
+// });
 
 // Change Password POST /login/password
 router.post("/password", isAuthorized, async (req, res, next) => {
@@ -89,6 +85,6 @@ router.post("/password", isAuthorized, async (req, res, next) => {
 });
 
 // Error handling middleware
-// router.use(errorHandler);
+router.use(errorHandler);
 
 module.exports = router;
