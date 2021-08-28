@@ -1,8 +1,5 @@
 const server = require("./server");
 const mongoose = require('mongoose');
-// require('dotenv').config();
-
-// const uri = process.env.MONGO_URI;
 
 const port = process.env.PORT || 5000;
 

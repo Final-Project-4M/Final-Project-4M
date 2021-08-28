@@ -5,15 +5,15 @@ const { isAuthorized } = require('../middleware/auth');
 const { errorHandler } = require('../middleware/error');
 
 const threadDao = require('../daos/thread');
-const postDao = require('../daos/post');
+// const postDao = require('../daos/post');
 
 // Create a thread
 // - `POST /thread`: If the user is logged in, it should store the incoming thread along with their userId.
 router.post("/", isAuthorized, async (req, res, next) => {
   try {
-    const { posts, userId } = req.body;
+    const { userId } = req.body;
     const threadObject = {
-      posts: posts,
+      posts: [],
       userId: userId
     };
     const threadCreated = await threadDao.createThread(threadObject);
@@ -48,7 +48,16 @@ router.get("/myThreads", isAuthorized, async (req, res, next) => {
 // Get a single thread
 // - `GET /thread/:threadId`: If the user is logged in, it should get the single thread with the provided id and that has their userId
 router.get("/:threadId", isAuthorized, async (req, res, next) => {
-
+  try {
+    const thisThread = await threadDao.getThreadById(req.params.threadId);
+    if (req.userInfo._id == thisThread.userId) {
+      res.json(thisThread);
+    } else {
+      res.status(404).send('Not Found');
+    }
+  } catch (e) {
+    next(e);
+  }
 });
 
 // Error handling middleware

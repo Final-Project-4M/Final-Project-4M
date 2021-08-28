@@ -64,9 +64,8 @@ router.post("/", async (req, res, next) => {
 });
 
 // Logout: POST/login/logout
-// I think you just need to delete the token in the frontend
-// router.post("/logout", isAuthorized, async (req, res, next) => {
-// });
+// I think you just need to delete the token in the frontend.
+// It is the frontend's responsibility to delete the token and logout.
 
 // Change Password POST /login/password
 router.post("/password", isAuthorized, async (req, res, next) => {
