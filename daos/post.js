@@ -14,8 +14,26 @@ module.exports.updatePost = async (postId, postObj) => {
     if (!mongoose.Types.ObjectId.isValid(postId)) {
         return false;
     }
+    const newContent = postObj.content;
     //update a post using their postId and the postObj
-    await Post.updateOne({ _id: postId }, postObj);
+    await Post.updateOne({ _id: postId }, { $set: { content: newContent } });
+    return true;
+};
+
+// Text search among posts
+module.exports.postsTextSearch = async (searchString) => {
+    return await Post.find(
+        { $text: { $search: searchString } },
+        { score: { $meta: "textScore" } }
+    ).sort({ score: { $meta: "textScore" } });
+};
+
+// Delete a post
+module.exports.deletePost = async (postId) => {
+    if (!mongoose.Types.ObjectId.isValid(postId)) {
+        return false;
+    }
+    await Post.deleteOne({ _id: postId });
     return true;
 };
 

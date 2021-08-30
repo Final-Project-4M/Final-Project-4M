@@ -4,7 +4,7 @@ const router = Router();
 const { isAuthorized } = require('../middleware/auth');
 const { errorHandler } = require('../middleware/error');
 
-const threadDao = require('../daos/thread');
+// const threadDao = require('../daos/thread');
 const postDao = require('../daos/post');
 
 // Create a post
@@ -23,6 +23,9 @@ router.post("/:threadId", isAuthorized, async (req, res, next) => {
     next(e);
   }
 });
+
+// Get all posts in a thread
+
 
 // Update (edit) a post
 // - `PUT /post/:postId`: If the user is logged in, and it is their post, they will have the ability to update their post.
@@ -54,13 +57,15 @@ router.delete("/:postId", isAuthorized, async (req, res, next) => {
     const postId = req.params.postId;
     const thisPost = await postDao.getOnePost(postId);
     if (thisPost.userId == req.userInfo._id) {
-
+      const deleted = await postDao.deletePost(postId);
+      if (deleted) {
+        res.status(200).send("Post deleted");
+      }
     } else {
       res.status(400).send("User does not own this post");
     }
-
   } catch (e) {
-
+    next(e);
   }
 });
 

@@ -4,11 +4,11 @@ require('dotenv').config();
 const jwtSecret = process.env.JWT_SECRET;
 
 const isAuthorized = async (req, res, next) => {
-  const token = req.headers.authorization;
-  if (!token) {
+  const tokenString = req.headers.authorization;
+  if (!tokenString) {
     res.status(401).send("User not logged in");
   } else {
-    const tokenString = token.split(' ')[1];
+    // const tokenString = token.split(' ')[1];
     jwt.verify(tokenString, jwtSecret, (err, decoded) => {
       if (err || !decoded) {
         res.status(401).send("Login info incorrect");
