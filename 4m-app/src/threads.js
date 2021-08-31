@@ -10,8 +10,7 @@ class Threads extends Component {
   }
 
   componentDidMount() {
-    // https://floating-reef-51161.herokuapp.com
-    fetch("http://localhost:5000/thread")
+    fetch("https://floating-reef-51161.herokuapp.com/thread")
       .then(response => response.json())
       .then(data => {
         console.log("hello")
