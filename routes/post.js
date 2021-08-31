@@ -1,11 +1,11 @@
 const { Router } = require('express');
 const router = Router();
 
+const postDao = require('../daos/post');
+const threadDao = require('../daos/thread');
+
 const { isAuthorized } = require('../middleware/auth');
 const { errorHandler } = require('../middleware/error');
-
-// const threadDao = require('../daos/thread');
-const postDao = require('../daos/post');
 
 // Create a post
 // - `POST /post/:threadId`: If the user is logged in, it should store the incoming post along with their userId.
@@ -18,6 +18,7 @@ router.post("/:threadId", isAuthorized, async (req, res, next) => {
       threadId: req.params.threadId
     }
     const createdPost = await postDao.createPost(postObject);
+    await threadDao.addPostToThread(createdPost._id, req.params.threadId);
     res.json(createdPost);
   } catch (e) {
     next(e);

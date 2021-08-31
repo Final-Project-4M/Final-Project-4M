@@ -20,9 +20,8 @@ router.get("/searchPosts", async (req, res, next) => {
 
 // Sort
 // - `GET /other/sortByNumber`: It should sort by number of posts in each thread with most number of posts on top.
-router.get("/sortByNumber", async (req, res, next) => {
-
-});
+// router.get("/sortByNumber", async (req, res, next) => {
+// });
 
 // Error handling middleware
 router.use(errorHandler);

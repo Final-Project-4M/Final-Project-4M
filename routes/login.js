@@ -16,6 +16,7 @@ router.post("/signup", async (req, res, next) => {
     res.status(400).send("Incomplete signup info");
   } else {
     try {
+      // console.log("/login/signup is reached");
       const user = await userDao.getUser(email);
       if (user) {
         res.status(409).send("An account with this email exists");

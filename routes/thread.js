@@ -53,7 +53,7 @@ router.get("/:threadId", isAuthorized, async (req, res, next) => {
     if (req.userInfo._id == thisThread.userId) {
       res.json(thisThread);
     } else {
-      res.status(404).send('Not Found');
+      res.status(404).send('User does not own this thread');
     }
   } catch (e) {
     next(e);
