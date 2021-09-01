@@ -11,9 +11,10 @@ const threadDao = require('../daos/thread');
 // - `POST /thread`: If the user is logged in, it should store the incoming thread along with their userId.
 router.post("/", isAuthorized, async (req, res, next) => {
   try {
-    const { userId } = req.body;
+    const { userId, title } = req.body;
     const threadObject = {
       posts: [],
+      title: title,
       userId: userId
     };
     const threadCreated = await threadDao.createThread(threadObject);

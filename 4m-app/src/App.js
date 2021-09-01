@@ -31,12 +31,10 @@ function App() {
             <Threads />
           </Route>
 
+          <Route exact path="/login/signup" component={Signup} />
+
           {/* <Route exact path="/login">
             <Login />
-          </Route>
-
-          <Route exact path="/login/signup">
-            <Signup />
           </Route> */}
 
         </Switch>
