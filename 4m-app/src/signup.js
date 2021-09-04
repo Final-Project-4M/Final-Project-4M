@@ -10,11 +10,15 @@ class Signup extends Component {
   // componentDidMount() {
   // }
 
-  signUpForUser = (newEmail, newPassword) => {
-    let signUpObj = new FormData();
-    signUpObj.append("email", newEmail);
-    signUpObj.append("password", newPassword);
-    fetch("http://localhost:5000/login/signup", { method: 'POST', body: signUpObj })
+  signUpForUser = (signUpObject) => {
+    // let signUpObj = new FormData();
+    // signUpObj.append("email", newEmail);
+    // signUpObj.append("password", newPassword);
+    fetch("http://localhost:5000/login/signup", {
+      method: 'POST',
+      body: JSON.stringify(signUpObject),
+      headers: { 'Content-Type': 'application/json' }
+    })
       .then(response => response.json())
       .then(data => {
         this.setState({
@@ -34,11 +38,11 @@ class Signup extends Component {
     const userNewPassword = event.target[1].value;
     console.log(userNewEmail);
     console.log(userNewPassword);
-    // const userSignUpObj = {
-    //   email: userNewEmail,
-    //   password: userNewPassword
-    // }
-    this.signUpForUser(userNewEmail, userNewPassword);
+    const userSignUpObj = {
+      email: userNewEmail,
+      password: userNewPassword
+    }
+    this.signUpForUser(userSignUpObj);
   }
 
   render() {
