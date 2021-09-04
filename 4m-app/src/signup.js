@@ -14,7 +14,8 @@ class Signup extends Component {
     // let signUpObj = new FormData();
     // signUpObj.append("email", newEmail);
     // signUpObj.append("password", newPassword);
-    fetch("http://localhost:5000/login/signup", {
+    // https://floating-reef-51161.herokuapp.com/
+    fetch("https://floating-reef-51161.herokuapp.com/login/signup", {
       method: 'POST',
       body: JSON.stringify(signUpObject),
       headers: { 'Content-Type': 'application/json' }
