@@ -4,7 +4,7 @@ const router = Router();
 const { errorHandler } = require('../middleware/error');
 
 const postDao = require("../daos/post");
-const threadDao = require("../daos/thread");
+// const threadDao = require("../daos/thread");
 
 // Text search
 // - `GET /other/searchPosts`: It should carry out a text search and return the posts with the best text search score.

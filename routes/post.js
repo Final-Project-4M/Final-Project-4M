@@ -11,7 +11,6 @@ const { errorHandler } = require('../middleware/error');
 // - `POST /post/:threadId`: If the user is logged in, it should store the incoming post along with their userId.
 router.post("/:threadId", isAuthorized, async (req, res, next) => {
   try {
-    // Make sure that the req body from frontend has a content field.
     const postObject = {
       content: req.body.content,
       userId: req.userInfo._id,
@@ -26,7 +25,9 @@ router.post("/:threadId", isAuthorized, async (req, res, next) => {
 });
 
 // Get all posts in a thread
-
+// GET "/post/:threadId"
+// router.get("/:threadId", async (req, res, next) => {
+// });
 
 // Update (edit) a post
 // - `PUT /post/:postId`: If the user is logged in, and it is their post, they will have the ability to update their post.

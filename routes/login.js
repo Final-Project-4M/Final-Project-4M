@@ -16,7 +16,6 @@ router.post("/signup", async (req, res, next) => {
     res.status(400).send("Incomplete signup info");
   } else {
     try {
-      // console.log("/login/signup is reached");
       const user = await userDao.getUser(email);
       if (user) {
         res.status(409).send("An account with this email exists");
@@ -63,10 +62,6 @@ router.post("/", async (req, res, next) => {
     }
   }
 });
-
-// Logout: POST/login/logout
-// I think you just need to delete the token in the frontend.
-// It is the frontend's responsibility to delete the token and logout.
 
 // Change Password POST /login/password
 router.post("/password", isAuthorized, async (req, res, next) => {

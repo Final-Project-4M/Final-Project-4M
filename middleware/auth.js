@@ -8,7 +8,6 @@ const isAuthorized = async (req, res, next) => {
   if (!tokenString) {
     res.status(401).send("User not logged in");
   } else {
-    // const tokenString = token.split(' ')[1];
     jwt.verify(tokenString, jwtSecret, (err, decoded) => {
       if (err || !decoded) {
         res.status(401).send("Login info incorrect");
@@ -19,10 +18,5 @@ const isAuthorized = async (req, res, next) => {
     });
   }
 }
-
-// const isAdmin = async (req, res, next) => {
-//   req.isAdmin = req.userInfo.roles.includes("admin");
-//   next();
-// }
 
 module.exports = { isAuthorized };
