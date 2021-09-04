@@ -8,10 +8,9 @@ require('dotenv').config();
 const jwtSecret = process.env.JWT_SECRET;
 const { isAuthorized } = require('../middleware/auth');
 const { errorHandler } = require('../middleware/error');
-const { corsFunc } = require('../middleware/cors');
 
 // Signup: POST /login/signup
-router.post("/signup", corsFunc, async (req, res, next) => {
+router.post("/signup", async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password || password === '') {
     res.status(400).send("Incomplete signup info");
