@@ -1,5 +1,5 @@
 const request = require("supertest");
-var jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
 const server = require("../server");
 const testUtils = require('../test-utils');
