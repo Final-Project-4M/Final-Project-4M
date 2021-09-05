@@ -52,7 +52,12 @@ router.post("/", async (req, res, next) => {
               res.status(401).send("Incorrect password");
             } else {
               const token = jwt.sign({ email: user.email, _id: user._id }, jwtSecret);
-              res.json({ token });
+              // res.json({ token });
+              const loginResp = {
+                token: token,
+                userId: user._id
+              }
+              res.json(loginResp);
             }
           });
         }
