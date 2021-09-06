@@ -1,5 +1,23 @@
 # 4M
 
+## Final Evaluation
+
+### Final Project Update as of 5 September 2021
+
+#### What We learned
+
+We started with weekly meetings to work together but we quickly learned that having these weekly meetings to work on the project together was inefficient given the remote nature of the team. Our form of communication, Slack, was an essential part on getting tasks done as we were able to tell the team what we're working on and receive feedback when possible. Although we had a Trello board up for project management, we found ourselves relying heavily on Slack because it was easier to talk to each other when picking up a task, making requests of others, and finding problems within our project.
+
+We also learned that connecting our backend to our frontend was challenging. We knew that our backend worked with verification from using Postman, but a lot of our challenges came from having to connect the backend to the frontend. Some of the times, we were unsure of the reason why, but we were able to work together and solve the problems to the best of our abilities.
+
+#### What We Would Like To Do Differently/Improve Upon
+
+We definitely would like to fine-tune our user and admin roles. We focused mostly on the user end as that is what we thought was best to focus on while working on this project in terms of presentation. We would like to have written more routes in regards to the admin role in this application. We also would like to improve our database and implement more thorough content that can be shown in the frontend for users viewing our application.
+
+#### Final Thoughts
+
+As a team, we believe our project is a useful project that anyone can use. We think we effectively fulfilled the requirements of the project and created a MongoDB/Express API driven app with Express.JS backend that can extended and fine-tuned should we choose to expand the application.
+
 ## Proof of Concept
 
 ### Project Update as of 22 August 2021
